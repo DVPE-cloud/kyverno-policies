@@ -1,0 +1,14 @@
+name: Run Kyverno policy unit tests
+
+jobs:
+  kyverno-job:
+    runs-on: ubuntu-latest
+    name: Run kyverno
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Validate policy
+        uses: gbaeke/kyverno-cli@v1
+        with:
+          command: |
+            kyverno test ./policies --resource=./deploy/deployment.yaml
