@@ -11,4 +11,4 @@ jobs:
         uses: gbaeke/kyverno-cli@v1
         with:
           command: |
-            kyverno test ./policies --resource=./deploy/deployment.yaml
+            kyverno version
