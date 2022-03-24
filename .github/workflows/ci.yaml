@@ -1,5 +1,8 @@
 name: Run Kyverno policy unit tests
 
+on:
+  push: {}
+
 jobs:
   kyverno-job:
     runs-on: ubuntu-latest
